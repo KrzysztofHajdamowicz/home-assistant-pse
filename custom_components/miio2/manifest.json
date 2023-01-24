@@ -1,14 +1,15 @@
 {
-  "domain": "miio2",
-  "name": "Xiaomi miio vacuum STYJ02YM",
-  "version": "2022.3.3",
-  "documentation": "https://github.com/KrzysztofHajdamowicz/home-assistant-vacuum-styj02ym",
+  "domain": "pse",
+  "name": "Polskie Sieci Elektroenergetyczne",
+  "version": "2023.1.0",
+  "documentation": "https://github.com/KrzysztofHajdamowicz/home-assistant-pse",
   "requirements": [
-    "construct==2.10.56",
-    "python-miio==0.5.11"
+    "csv",
+    "datetime",
+    "requests"
   ],
   "dependencies": [],
-  "codeowners": ["@nqkdev", "@KrzysztofHajdamowicz"],
+  "codeowners": ["@KrzysztofHajdamowicz"],
   "config_flow": false,
-  "iot_class": "local_polling"
+  "iot_class": "cloud_polling"
 }
