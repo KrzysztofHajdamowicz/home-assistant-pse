@@ -2,7 +2,7 @@
 {
     "name": "pse",
     "country": ["PL"],
-    "domains": ["binary_sensor"],
+    "issue_tracker": "https://github.com/KrzysztofHajdamowicz/home-assistant-pse/issues",
     "homeassistant": "2023.1.0",
     "iot_class": "cloud_polling",
     "zip_release": true,
