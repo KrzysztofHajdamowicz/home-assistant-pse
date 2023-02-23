@@ -29,7 +29,7 @@ class PSEBinarySensor(BinarySensorEntity):
         if self.data is not None:
             output["demand"] = float(self.data[2].replace(",","."))
         if self.change is not None:
-            output["change"] = float(self.data[1])
+            output["change"] = float(self.change[1])
         return output
 
     @property
