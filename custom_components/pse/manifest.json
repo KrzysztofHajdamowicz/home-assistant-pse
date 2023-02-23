@@ -9,8 +9,6 @@
   "documentation": "https://github.com/KrzysztofHajdamowicz/home-assistant-pse",
   "iot_class": "cloud_polling",
   "requirements": [
-    "csv",
-    "datetime",
     "requests"
   ],
   "version": "2023.1.0"
