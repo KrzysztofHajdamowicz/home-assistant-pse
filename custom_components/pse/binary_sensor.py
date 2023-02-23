@@ -6,7 +6,7 @@ from homeassistant.components.binary_sensor import BinarySensorEntity
 
 
 def setup_platform(hass, config, add_entities, discovery_info=None):
-    add_entities([], True)
+    add_entities([PSEBinarySensor()], True)
 
 
 class PSEBinarySensor(BinarySensorEntity):
