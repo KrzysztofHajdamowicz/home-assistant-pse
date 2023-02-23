@@ -27,7 +27,7 @@ class PSEBinarySensor(BinarySensorEntity):
     def extra_state_attributes(self):
         output = dict()
         if self.data is not None:
-            output["demand"] = float(self.data[3].replace(",","."))
+            output["demand"] = float(self.data[2].replace(",","."))
         return output
 
     @property
