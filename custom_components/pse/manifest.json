@@ -1,7 +1,9 @@
 {
   "domain": "pse",
   "name": "Polskie Sieci Elektroenergetyczne",
-  "codeowners": ["@KrzysztofHajdamowicz"],
+  "codeowners": [
+    "@KrzysztofHajdamowicz"
+  ],
   "config_flow": false,
   "dependencies": [],
   "documentation": "https://github.com/KrzysztofHajdamowicz/home-assistant-pse",
@@ -11,5 +13,5 @@
     "datetime",
     "requests"
   ],
-  "version": "2023.1.0",
+  "version": "2023.1.0"
 }
