@@ -19,6 +19,12 @@ jobs:
 
       - name: Upload zip to release
         uses: svenstaro/upload-release-action@2.4.1
+        permissions:
+          # write permission is required to create a github release
+          contents: write
+          # write permission is required for autolabeler
+          # otherwise, read permission is required at least
+          pull-requests: write
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: /home/runner/work/home-assistant-pse/home-assistant-pse/custom_components/pse/pse.zip
