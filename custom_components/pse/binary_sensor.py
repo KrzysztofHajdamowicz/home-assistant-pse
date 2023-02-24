@@ -44,6 +44,9 @@ class PSEBinarySensor(BinarySensorEntity):
         response = requests.get(f"https://www.pse.pl/getcsv/-/export/csv/PL_GS/data/{now.strftime('%Y%m%d')}")
         csv_output = csv.reader(response.text.splitlines(), delimiter=";")
         self.data = next(filter(lambda r: r[1] == now_hour, csv_output))
-        self.change = next(filter(lambda r: r[3] != self.data[3], csv_output))
-
+        try:
+            self.change = next(filter(lambda r: r[3] != self.data[3], csv_output))
+        except StopIteration as e:
+            pass
+        
         
