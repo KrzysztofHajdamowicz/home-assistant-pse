@@ -49,6 +49,6 @@ class PSEBinarySensor(BinarySensorEntity):
         try:
             self.change = next(filter(lambda r: r[3] != self.data[3], csv_output))
         except StopIteration as e:
-            pass
+            del self.change
         
         
