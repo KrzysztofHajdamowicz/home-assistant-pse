@@ -11,7 +11,8 @@ def setup_platform(hass, config, add_entities, discovery_info=None):
 
 class PSEBinarySensor(BinarySensorEntity):
     def __init__(self):
-        self.data = None
+        self.data   = None
+        self.change = None
 
     @property
     def name(self):
