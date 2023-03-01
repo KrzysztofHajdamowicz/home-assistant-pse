@@ -11,7 +11,8 @@ def setup_platform(hass, config, add_entities, discovery_info=None):
 
 class PSEBinarySensor(BinarySensorEntity):
     def __init__(self):
-        self.data = None
+        self.data   = None
+        self.change = None
 
     @property
     def name(self):
@@ -30,6 +31,8 @@ class PSEBinarySensor(BinarySensorEntity):
             output["demand"] = float(self.data[2].replace(",","."))
         if self.change is not None:
             output["change"] = float(self.change[1])
+        else:
+            output["change"] = "#N/A" 
         return output
 
     @property
@@ -47,6 +50,6 @@ class PSEBinarySensor(BinarySensorEntity):
         try:
             self.change = next(filter(lambda r: r[3] != self.data[3], csv_output))
         except StopIteration as e:
-            pass
+            self.change = None 
         
         
